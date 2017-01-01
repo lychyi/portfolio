@@ -19,28 +19,28 @@ export class FolioDataService {
         title: 'User interface design and development for custom products at Illumina',
         imgSrc: '96xt-beadchip-icon.svg',
         themeClass: 'cool-mint',
-        routeLink: 'accessible-color'
+        routeLink: 'custom-products'
       },
       {
         id: 3,
         title: 'Crafting a design system at Applied Genomics',
         imgSrc: 'design-traits-logo-bare.svg',
         themeClass: 'icy-water',
-        routeLink: 'accessible-color'
+        routeLink: 'design-system'
       },
       {
         id: 4,
         title: 'Multi-hued color palettes for data visualizations',
         imgSrc: 'color-data-viz.svg',
         themeClass: 'clean-laundry',
-        routeLink: 'accessible-color'
+        routeLink: 'colors-for-data-visualizations'
       },
       {
         id: 5,
         title: 'Polymer Elements Best Practices',
         imgSrc: 'polymer-logo.svg',
         themeClass: 'slate-60',
-        routeLink: 'accessible-color'
+        routeLink: 'polymer-elements'
       },
     ];
 

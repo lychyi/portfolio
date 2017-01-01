@@ -5,15 +5,16 @@
   <div class="project-text">
     <h1>{{title}}</h1>
     <p>
-      How do you design a color system for the web?
+      <i>A walkthrough of how we designed a custom (well, almost), diverse color system at Illumina that put accessibility at the forefront while serving our vast ecosystem of products in a consistent manner.</i>
     </p>
     <p>
       A color system for the web is somewhat unique.
       Color conveys important information and provides context (warnings, errors, and successes).
-      It reflects your company's brand and implies mood.
-      Surprisingly though, color is often times inconsistent across user interfaces and an afterthought.
-      Who cares if we're using <span style="color: #FFB441">this orange</span> or <span style="color: #FC9900">this orange</span>?
-      Furthermore, how do we even know you can read <span style="color: #FFB441">this orange</span> on this background?
+      Moreover, it reflects your product's brand and can even be an important part of the brand in it of itself.
+      Surprisingly though, color is often times inconsistent across user interfaces and treated as an afterthought.
+      Without guidelines, does it matter if we're using <span style="color: #FFB441">this orange</span> or <span style="color: #FC9900">this orange</span>?
+      Furthermore, how do we even know when and where to use colors.
+      Can you can read <span style="color: #FFB441">this orange</span> on this background?
       If you have monochromacy (a type of color blindness where you see the world in only one frequency of color or in blacka and white), it may be difficult since the relative luminance values of each color may be too close, resulting in low contrast.
       Can you read this: <span style="color: #C2C2C2">"I may be difficult to read on certain devices."</span>?
       You can probably make it out but it isn't easy and this is what a person with monochromacy will encounter with the orange shown earlier against this background.
@@ -36,11 +37,11 @@
       So how does one design a color system? 
       If you're a company or brand that has many software products, like Illumina, you'll want to a decent-sized color palette to choose from.
       We didn't want one so big that you could choose just about anything.
-      We didn't want one so restrictive that all user interfaces would look alike.
+      We didn't want one so restrictive that all user interfaces would look nearly identical.
       We also wanted guidelines and principles to be baked in so that the user of the color system would have an easier time reasoning about it.
     </p>
     <p>
-      With that in mind, we decided to develop a diverse color system specifically for the web with compmlementary colors to our brand and at the same time, promote accessibility through an easy to learn contrast system.
+      With that in mind, we decided to develop a diverse color system specifically for the web with colors complementary to our brand and at the same time, promote standardized accessibility.
     </p>
   </div>
   <div class="project-text">
@@ -62,7 +63,8 @@
     <p>
       Luckily, the hard part was already done by someone else. 
       The <a href="http://www.ibm.com/design/language/framework/visual/color/" target="_blank">IBM Design Language</a> had already neatly solved this problem in an elegant way.
-      They had a color system with baked in accessibility and it seemed to have enough shades and hues to give us a diverse palette.
+      They had a color system with baked in accessibility and it had eough variation to give us a diverse palette.
+      We made a few small modifications but this color system unashamedly borrows from them.
     </p>
     <div class="statement">
       Thank you IBM Design.
@@ -87,7 +89,7 @@
     <div class="contrast-example-section">
       <div class="contrast-example">
         <h3 style="color: #FFF;"><b>Holy Cow Batman!</b></h3>
-        This text here passes the WCAG contrast test.
+        <p>This text here passes the WCAG contrast test.</p>
       </div>
       <div class="equation-section">
         <span class="equation">
@@ -100,10 +102,10 @@
       </div>
     </div>
     <h2>Color and numbers?</h2>
-    <h3>Our Primary Hues</h3>
+    <h3>Pick primary hues to start</h3>
     <p>
-      What we ended up doing at Illumina was picking a few hues for our color palette.
-      This is the largely subjective part.
+      What we ended up doing at Illumina was picking a few starting hues for our color palette.
+      This is the largely subjective part and arguable the most important since it sets us apart from just outright using someone else's color palette.
       The colors were inspired by the vibrant optical filters inside of our Illumina sequencers.
       We also wanted boldness and vibrancy to be the dominant theme for our colors so this was perfect.
     </p>
@@ -112,7 +114,7 @@
     <div class="color-spectrum-item" *ngFor="let item of ilmnColors" [style.backgroundColor]="item"></div>
   </div>
   <div class="project-text">
-    <h3>Generate Shades</h3>
+    <h3>Generate shades from those hues</h3>
     <p>
       We then generated a variety of shades (we did this programmatically using <a href="https://github.com/gka/chroma.js/" target="_blank">chroma.js</a>, a very handy JavaScript library when working with color) from these hues based on relative luminance and gave it a numerical label.
       This label corresponds to the contrast calculation we did in the example above.
@@ -156,22 +158,23 @@
     </div>
   </div>
   <div class="project-text">
-    <h3>Consistent, Accessible Colors</h3>
+    <h3>Voila. Consistent, Accessible Colors</h3>
     <p>
-      This results in a color system that is broad but consistent.
+      This results in a color system that is diverse yet consistent.
       We carefully selected colors that reflect our brand and generated enough variation for our current user interfaces and the ones to come.
     </p>
-    <h2>Creativity meets practicality</h2>
+    <h2>Subjectivity meets practicality</h2>
     <blockquote>A successful color system needs to strike the right balance between form and function.</blockquote>
     <p>
       Programmatic color generation does have some issues.
       It doesn't account for how we perceive color as humans.
       For example, our 'warning' (yellow) hue started getting muddy from shades 40 and beyond.
-      Unfortunately, this is just the nature of how relative luminance affects orange and yellow hues so we just nixed shades 40 through 90.
+      Unfortunately, this is just the nature of how orange and yellow hues get when their shades get darker so we just nixed shades 40 through 90.
+      Another example is that we removed the darkest shade (it was nearly black) and added a lighter shade because we felt that our user interfaces needed more subdued versions of the hues.
     </p>
     <p>
       A successful color system needs to strike the right balance between form and function.
-      Our aim was to craft a system of colors that really drove home the importance cohesion and the impact it has on all of our users.
+      Our aim was to craft a system of colors that really reflected a consistent brand while promoting accessibility at it's core.
       We were able to accomplish this while still making it beautiful.
     </p>
   </div>  

@@ -5,19 +5,9 @@
     padding: 20px 0;
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
-
 #project-container {
     margin: 0 auto;
     text-align: center;
-}
-#project-hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-    height: 620px;
-    width: 100%;
-    background: #333;
 }
 h1 {
     font-size: 3em;
@@ -41,16 +31,13 @@ h3 {
     margin: 0 auto;
     text-align: left;
 }
-
 img.full-width {
     width: 100%;
     margin: 25px 0;
 }
-
 img.centered {
     margin: 0 auto;
 }
-
 .statement {
     text-align: center;
     font-family: 'Libre Franklin', sans-serif;
@@ -60,6 +47,16 @@ img.centered {
     margin-bottom: 25px;
 }
 
+// Custom to this component
+#project-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    height: 620px;
+    width: 100%;
+    background: #4F5A67;
+}
 .contrast-example-section {
     font-family: 'Libre Franklin', sans-serif;
     display: flex;

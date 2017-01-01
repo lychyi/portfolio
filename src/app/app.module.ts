@@ -12,10 +12,18 @@ import { FolioDataService } from './folio-data.service';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AccessibleColorComponent } from './projects/accessible-color/accessible-color.component';
+import { CustomProductsComponent } from './projects/custom-products/custom-products.component';
+import { DesignSystemComponent } from './projects/design-system/design-system.component';
+import { ColorsForDataVisComponent } from './projects/colors-for-data-vis/colors-for-data-vis.component';
+import { PolymerElementsComponent } from './projects/polymer-elements/polymer-elements.component';
 
 const appRoutes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'projects/accessible-color', component: AccessibleColorComponent },
+  { path: 'projects/custom-products', component: CustomProductsComponent },
+  { path: 'projects/design-system', component: DesignSystemComponent },
+  { path: 'projects/colors-for-data-visualizations', component: ColorsForDataVisComponent },
+  { path: 'projects/polymer-elements', component: PolymerElementsComponent },
   { path: '',   redirectTo: '/projects', pathMatch: 'full' },
 ];
 
@@ -27,7 +35,11 @@ const appRoutes: Routes = [
     FolioAreaComponent,
     FooterComponent,
     ProjectsComponent,
-    AccessibleColorComponent
+    AccessibleColorComponent,
+    CustomProductsComponent,
+    DesignSystemComponent,
+    ColorsForDataVisComponent,
+    PolymerElementsComponent
   ],
   imports: [
     BrowserModule,
