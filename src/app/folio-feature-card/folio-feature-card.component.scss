@@ -1,0 +1,77 @@
+$darken-percentage: 5;
+$folio-max-width: 1400px;
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 80px 30px;
+    width: $folio-max-width / 2;
+    min-height: 360px;
+    background-color: #333;
+    color: #FFF;
+    transition: background-color 0.5s, color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    cursor: pointer;
+}
+
+ #card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: inherit;
+    color: inherit;
+    line-height: 2.0em;
+ }
+
+:host(.strawberry-milk) {
+    background-color: #FFDEED;
+    color: #333333;
+}
+:host(.strawberry-milk:hover) {
+    background-color: darken(grayscale(#FFDEED), $darken-percentage);
+}
+:host(.cool-mint) {
+    background-color: #D2FFE3;
+    color: #333333;
+}
+:host(.cool-mint:hover) {
+    background-color: darken(grayscale(#D2FFE3), $darken-percentage);
+}
+:host(.icy-water) {
+    background-color: #B7EEFF;
+    color: #333333;
+}
+:host(.icy-water:hover) {
+    background-color: darken(grayscale(#B7EEFF), $darken-percentage);
+}
+:host(.dark-grey) {
+    background-color: #414141;
+    color: #FFFFFF;
+}
+:host(.dark-grey:hover) {
+    background-color: darken(grayscale(#414141), $darken-percentage);
+}
+:host(.clean-laundry) {
+    background-color: #FFFFFF;
+    color: #333333;
+}
+:host(.clean-laundry:hover) {
+    background-color: darken(grayscale(#FFFFFF), $darken-percentage);
+}
+:host(.slate-50) {
+    background-color: #69788E;
+    color: #FFFFFF;
+}
+:host(.slate-50:hover) {
+    background-color: darken(grayscale(#69788E), $darken-percentage);
+}
+:host(.slate-60) {
+    background-color: #4F5A67;
+    color: #FFFFFF;
+}
+:host(.slate-60:hover) {
+    background-color: darken(grayscale(#4F5A67), $darken-percentage);
+}

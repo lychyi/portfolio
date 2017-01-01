@@ -1,0 +1,5 @@
+
+<app-folio-feature-card *ngFor="let feat of features" class="{{feat.themeClass}}" routerLink="{{feat.routeLink}}">
+  <img src="/assets/img/{{feat.imgSrc}}" alt="" class="feature-image">
+  <h2>{{feat.title}}</h2>
+</app-folio-feature-card>

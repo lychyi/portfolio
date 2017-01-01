@@ -1,0 +1,20 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 20px 30px;
+}
+.lynn-icon {
+    order: -1;
+    margin-right: 30px;
+}
+.lynn-icon img {
+    height: 39px;
+    opacity: 0.8;
+}
+#mission-statement {
+    max-width: 640px;
+}

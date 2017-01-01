@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="65px" height="34px" viewBox="0 0 65 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M59.2375,0.39597561 L59.1560417,0.404682927 L0.0525,6.8194878 L0.0525,32.5019268 L3.173125,32.163378 L3.21916667,32.1584024 L62.3229167,25.7433902 L62.3229167,0.0609512195 L59.2375,0.39597561 Z M3.21916667,9.71259756 L59.1560417,3.64131707 L59.1560417,22.8504878 L3.21916667,28.921561 L3.21916667,9.71259756 Z" id="path-1"></path>
+        <linearGradient x1="0.000149156981%" y1="23.076957%" x2="0.000149156981%" y2="1598.45974%" id="linearGradient-3">
+            <stop stop-color="#FEDD7E" offset="0%"></stop>
+            <stop stop-color="#C24599" offset="45.3125%"></stop>
+            <stop stop-color="#48C1C5" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-0.000179057739%" y1="-3.06748466e-05%" x2="99.3882036%" y2="99.3881403%" id="linearGradient-4">
+            <stop stop-color="#FEDD7E" offset="0%"></stop>
+            <stop stop-color="#C24599" offset="45.3125%"></stop>
+            <stop stop-color="#48C1C5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="design-traits-icon" transform="translate(0.000000, -16.000000)">
+            <g id="Page-1" transform="translate(0.000000, 16.000000)">
+                <path d="M61.4348958,1.92487683 L61.4346875,1.92466951 L61.0140625,1.97048659 L61.0140625,1.9706939 L2.7021875,8.2994622 L2.7021875,29.9359012 L2.7021875,30.3656695 L2.7021875,33.9816939 L6.2403125,33.5977427 L6.66072917,33.5521329 L6.66072917,33.5519256 L64.9726042,27.2231573 L64.9726042,1.54092561 L61.4348958,1.92487683 Z M6.66072917,11.9156939 L61.0140625,6.01627927 L61.0140625,23.6069256 L6.66072917,29.5063402 L6.66072917,11.9156939 Z" id="Fill-1" fill="#DEE1E5"></path>
+                <g id="Group-4" transform="translate(0.000000, 0.128122)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-3"></g>
+                    <polygon id="Fill-2" fill="url(#linearGradient-3)" mask="url(#mask-2)" points="0.0522916667 49.7560976 64.9727083 49.7560976 64.9727083 -14.8476341 0.0522916667 -14.8476341"></polygon>
+                </g>
+                <path d="M59.2375,0.523890244 L59.1560417,0.532804878 L0.0525,6.94760976 L0.0525,32.6300488 L3.173125,32.2915 L3.21916667,32.2865244 L62.3229167,25.8715122 L62.3229167,0.189073171 L59.2375,0.523890244 Z M3.21916667,9.84071951 L59.1560417,3.76943902 L59.1560417,22.9786098 L3.21916667,29.0496829 L3.21916667,9.84071951 Z" id="Fill-5" fill="url(#linearGradient-4)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

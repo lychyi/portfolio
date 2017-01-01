@@ -1,0 +1,128 @@
+:host {
+    box-sizing: border-box;
+    display: block;
+    width: 100vw;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+#project-container {
+    margin: 0 auto;
+    text-align: center;
+}
+#project-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    height: 620px;
+    width: 100%;
+    background: #333;
+}
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+h2 {
+    font-size: 2.2em;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+}
+h3 {
+    font-weight: 700;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    margin-bottom: 1em;
+}
+.project-text {
+    padding: 0 30px;
+    max-width: 660px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+img.full-width {
+    width: 100%;
+    margin: 25px 0;
+}
+
+img.centered {
+    margin: 0 auto;
+}
+
+.statement {
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+    padding: 20px 30px;
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+
+.contrast-example-section {
+    font-family: 'Libre Franklin', sans-serif;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.contrast-example {
+    float: left;
+    margin-bottom: 25px;
+    font-family: inherit;
+    width: 260px;
+    background-color: #3E4752;
+    color: #E7AFD6;
+    padding: 30px;
+}
+
+.equation-section {
+    margin-left: 20px;
+}
+.equation {
+    margin-bottom: 15px;
+    display: block;
+    border-bottom: 1px solid #333;
+
+    .operand {
+        display: block;
+        padding-left: 10px;
+        margin-bottom: 15px;    
+    }
+    span.operand:last-child:before {
+        content: '\2212';
+        // padding-right: 10px;
+        margin-left: -10px;
+    }
+    span.operand:last-child:after {
+        border-bottom: 1px solid #333;
+    }
+}
+.result {
+    display: block;
+    padding-left: 10px;
+}
+.color-spectrum {
+    display: flex;
+    height: 102px;
+    width: 80%;
+    margin: 25px auto;    
+    .color-spectrum-item {
+        flex: 1;
+        opacity: 1;
+        position: relative;
+    }
+    .spectrum-item-label {
+        font-family: 'Libre Franklin', sans-serif;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.5);
+        color: #FFF;
+        padding: 5px;
+    }
+}
+.color-spectrum.half {
+    height: 51px;
+}

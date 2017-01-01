@@ -1,0 +1,31 @@
+$folio-max-width: 1400px;
+
+:host {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: $folio-max-width;
+    margin: 0 auto;
+}
+@media (max-width: $folio-max-width) {
+    :host {
+        justify-content: center;
+    }
+}
+.circle-icon {
+    display: block;
+    border: 6px solid lightskyblue;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    transition: 0.5s border-color cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.feature-image {
+    transition: 0.5s filter, 0.5s transform cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    margin-bottom: 2em;
+}
+
+.feature-image.hovered {
+    transform: translateY(0.5em);
+    filter: grayscale(100%);
+}

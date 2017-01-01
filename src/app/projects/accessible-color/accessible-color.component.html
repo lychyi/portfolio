@@ -1,0 +1,161 @@
+<article id="project-container">
+  <span id="project-hero">
+    <img style="height: 200px; width: 200px;" class="centered" src="/assets/img/color-logo.svg" alt="">
+  </span>
+  <div class="project-text">
+    <h1>{{title}}</h1>
+    <p>
+      How do you design a color system for the web?
+    </p>
+    <p>
+      A color system for the web is somewhat unique.
+      Color conveys important information and provides context (warnings, errors, and successes).
+      It reflects your company's brand and implies mood.
+      Surprisingly though, color is often times inconsistent across user interfaces and an afterthought.
+      Who cares if we're using <span style="color: #FFB441">this orange</span> or <span style="color: #FC9900">this orange</span>?
+      Furthermore, how do we even know you can read <span style="color: #FFB441">this orange</span> on this background?
+      If you have monochromacy, it may be difficult since the relative luminance values of each color may be too close, resulting in low contrast.
+      Can you read this: <span style="color: #C2C2C2">"I may be difficult to read on certain devices."</span>?
+      You can probably make it out but it isn't easy and this is what a person with monochromacy will encounter with the orange shown earlier against this background.
+    </p>
+    <div class="statement">Accessibility matters.</div>
+    <p>
+      At Illumina, we faced challenges like this. Our brand colors were never designed for software user interfaces on the web, let alone an entire family and ecosystem of products.
+      That <span style="color: #FFB441">orange color</span> we presented earlier? That's <i>Illumina Pumpkin Orange</i>. Our flagship brand color.
+      When we use that on software user interfaces with a light-grey background, we're essentially making accessibility difficult.
+      I'm not saying anyone advised software developers to use Illumina Pumpkin Orange on grey but without guidelines and principles (and some unspoken rule that all scientific software needs to have a light-grey or white background), you can see how it is easy to misuse.
+    </p>
+    <h3>Inaccessible and inconsistent</h3>
+    <p>
+      Without a formal color system, software at Illumina could be designed with any palette.
+      Color was up to the designer or developer to implement.
+      This resulted in colors that were inconsistent across user interfaces and didn't necessarily reflect our brand or guarantee accessibility for all of our users.
+    </p>
+    <h2>Creating a color system</h2>
+    <p>
+      So how does one design a color system? 
+      If you're a company or brand that has many software products, like Illumina, you'll want to a decent-sized color palette to choose from.
+      We didn't want one so big that you could choose just about anything.
+      We didn't want one so restrictive that all user interfaces would look alike.
+      We also wanted guidelines and principles to be baked in so that the user of the color system would have an easier time reasoning about it.
+    </p>
+    <p>
+      With that in mind, we decided to develop a diverse color system specifically for the web with compmlementary colors to our brand and at the same time, promote accessibility through an easy to learn contrast system.
+    </p>
+  </div>
+  <div class="project-text">
+    <h2>Beg, Borrow, and Steal</h2>
+    <blockquote>
+      Luckily, the hard part was already done by someone else. 
+    </blockquote>
+    <p>
+      Color theory and systems for web user interfaces have been solved before. 
+      When our design team met up to discuss color, it immediately became clear that it was difficult to solve this organically.
+      Color is the way which we perceive segments of the visible light spectrum.
+      We're talking about wavelengths, contrast, luminance, hue, saturation, lightness, etc.
+      In other words, functional parameters of a complex physics equation.
+      We have a natural tendency to attach emotion and subjectiveness to color, but a solid color system needed to be based upon color theory and a bit of math.
+    </p>
+    <p>
+      Luckily, the hard part was already done by someone else. 
+      The <a href="http://www.ibm.com/design/language/framework/visual/color/" target="_blank">IBM Design Language</a> had already neatly solved this problem in an elegant way.
+      They had a color system with baked in accessibility and it seemed to have enough shades and hues to give us a diverse palette.
+    </p>
+    <div class="statement">
+      Thank you IBM Design.
+    </div>
+    <h2>Accessibility comes down to contrast. Contrast is math. Make the math simple.</h2>
+    <p>
+      Accessibility really just comes down to contrast.
+      There are minimum contrast ratios prescribed by the <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">W3C</a> that define what makes text legible for all users.
+      The equation is based on <a href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">relative luminance</a>.
+      Once you get relative luminance, you plug it into this equation:
+      <code>(L1 + 0.05) / (L2 + 0.05)</code>.
+      Where <code>L1</code> is the lighter of the two colors and <code>L2</code> is the darker of the two colors.
+    </p> 
+    <p>
+      But we're busy.
+      Having to plug colors into an equation to verify contrast for accessibility is tedious at best.
+      What's more problematic is that it wouldn't do us any favors when designing for accessibility.
+    </p>
+    <p>This is much easier: </p>
+    <div class="contrast-example-section">
+      <div class="contrast-example">
+        <h3 style="color: #FFF;"><b>Holy Cow Batman!</b></h3>
+        This text here passes the WCAG contrast test.
+      </div>
+      <div class="equation-section">
+        <span class="equation">
+          <span class="operand"><b>Background Color:</b> Slate 70</span>
+          <span class="operand"><b>Text Color: </b> Violet 20</span>
+        </span>
+        <span class="result">
+          50 or greater means it's accessible
+        </span>
+      </div>
+    </div>
+    <h2>Color and numbers</h2>
+    <h3>Our Primary Hues</h3>
+    <p>
+      What we ended up doing at Illumina was picking a few hues for our color palette.
+      This is the fun subjective part.
+      They were inspired by the vibrant filter colors inside our Illumina sequencers.
+      We also wanted vibrancy to be the dominant theme for our colors.
+    </p>
+  </div>
+  <div class="color-spectrum">
+    <div class="color-spectrum-item" *ngFor="let item of ilmnColors" [style.backgroundColor]="item"></div>
+  </div>
+  <div class="project-text">
+    <h3>Generate Shades</h3>
+    <p>
+      We then generated a variety of shades from these hues based on relative luminance and gave it a numerical label.
+      This label corresponds to the contrast calculation we did in the example above.
+      Whenever two colors have a difference of 50 or greater, we can be assured that there is enough contrast by WCAG standards to be accessible.
+    </p>
+  </div>
+  <div class="color-spectrum half">
+    <div class="color-spectrum-item" *ngFor="let item of shadesOfTeal" [style.backgroundColor]="item.color">
+      <span class="spectrum-item-label">{{item.shade}}</span>
+    </div>
+  </div>
+  <div class="color-spectrum half">
+    <div class="color-spectrum-item" *ngFor="let item of shadesOfError" [style.backgroundColor]="item.color">
+      <span class="spectrum-item-label">{{item.shade}}</span>
+    </div>
+  </div>
+  <div class="color-spectrum half">
+    <div class="color-spectrum-item" *ngFor="let item of shadesOfPurple" [style.backgroundColor]="item.color">
+      <span class="spectrum-item-label">{{item.shade}}</span>
+    </div>
+  </div>
+  <div class="project-text">
+    <p>
+      Each numerical label has the same relative luminance across all color hues.
+      If you were to see each hue and their shades with monochromacy, they would look identical.
+    </p>
+  </div>
+  <div class="color-spectrum half">
+    <div class="color-spectrum-item" *ngFor="let item of shadesOfGrey" [style.backgroundColor]="item.color">
+      <span class="spectrum-item-label">{{item.shade}}</span>
+    </div>
+  </div>
+  <div class="color-spectrum half">
+    <div class="color-spectrum-item" *ngFor="let item of shadesOfGrey" [style.backgroundColor]="item.color">
+      <span class="spectrum-item-label">{{item.shade}}</span>
+    </div>
+  </div>
+  <div class="color-spectrum half">
+    <div class="color-spectrum-item" *ngFor="let item of shadesOfGrey" [style.backgroundColor]="item.color">
+      <span class="spectrum-item-label">{{item.shade}}</span>
+    </div>
+  </div>
+  <div class="project-text">
+    <h3>Consistent, Accessible Colors</h3>
+    <p>
+      This results in a color system that is broad but consistent.
+      We carefully selected colors that reflect our brand and generated enough variation for our current user interfaces and the ones to come.
+    </p>
+    
+  </div>  
+</article>
