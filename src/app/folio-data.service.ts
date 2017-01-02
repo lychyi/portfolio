@@ -37,7 +37,7 @@ export class FolioDataService {
       },
       {
         id: 5,
-        title: 'Polymer Elements Best Practices',
+        title: 'Component Driven Design with Polymer',
         imgSrc: 'polymer-logo.svg',
         themeClass: 'slate-60',
         routeLink: 'polymer-elements'
@@ -45,5 +45,9 @@ export class FolioDataService {
     ];
 
     return mockData;
+  }
+
+  getFolioItemById(id: number) {
+    return this.getFolioData().find((item) => { return item.id === id; });
   }
 }

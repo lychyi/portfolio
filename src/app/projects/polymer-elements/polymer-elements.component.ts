@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FolioDataService } from '../../folio-data.service';
 
 @Component({
   selector: 'app-polymer-elements',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../../shared-styles/project-page-styles.scss', './polymer-elements.component.scss']
 })
 export class PolymerElementsComponent implements OnInit {
-
-  constructor() { }
+  title: string = '';
+  imgSrc: string;
+  constructor(private folioDataService: FolioDataService) { }
 
   ngOnInit() {
+    this.title = this.folioDataService.getFolioItemById(5).title;
+    this.imgSrc = this.folioDataService.getFolioItemById(5).imgSrc;
   }
 
 }

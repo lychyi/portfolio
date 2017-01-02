@@ -8,6 +8,8 @@ import { FolioDataService } from '../../folio-data.service';
 })
 export class AccessibleColorComponent implements OnInit {
   title: string = '';
+  imgSrc: string;
+  
   ilmnColors: string[] = [
     '#14D4D1',
     '#8FA2F4',
@@ -20,16 +22,16 @@ export class AccessibleColorComponent implements OnInit {
   ];
 
   shadesOfTeal = [
-    { shade: 5, color: '#CBFAF9' }, 
-    { shade: 10, color: '#80F3F1' }, 
-    { shade: 20, color: '#14D4D1' }, 
-    { shade: 30, color: '#11B8B5' }, 
-    { shade: 40, color: '#0EA4A2' }, 
-    { shade: 50, color: '#0A8482' }, 
-    { shade: 60, color: '#076362' }, 
-    { shade: 70, color: '#064E4D' }, 
-    { shade: 80, color: '#043A39' }, 
-    { shade: 90, color: '#032C2B' }, 
+    { shade: 5, color: '#CBFAF9' },
+    { shade: 10, color: '#80F3F1' },
+    { shade: 20, color: '#14D4D1' },
+    { shade: 30, color: '#11B8B5' },
+    { shade: 40, color: '#0EA4A2' },
+    { shade: 50, color: '#0A8482' },
+    { shade: 60, color: '#076362' },
+    { shade: 70, color: '#064E4D' },
+    { shade: 80, color: '#043A39' },
+    { shade: 90, color: '#032C2B' },
   ];
 
   shadesOfError = [
@@ -74,13 +76,7 @@ export class AccessibleColorComponent implements OnInit {
   constructor(private folioDataService: FolioDataService) { }
 
   ngOnInit() {
-    this.title = this.getTitleFromFolio();
+    this.title = this.folioDataService.getFolioItemById(1).title;
+    this.imgSrc = this.folioDataService.getFolioItemById(1).imgSrc;
   }
-
-  getTitleFromFolio() {
-    let targetId = 1; // Id of this folio's content
-    let folioData: any[] = this.folioDataService.getFolioData();
-    return folioData.find((item) => { return item.id === 1; }).title;
-  }
-
 }
