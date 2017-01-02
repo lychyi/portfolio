@@ -16,6 +16,7 @@ import { CustomProductsComponent } from './projects/custom-products/custom-produ
 import { DesignSystemComponent } from './projects/design-system/design-system.component';
 import { ColorsForDataVisComponent } from './projects/colors-for-data-vis/colors-for-data-vis.component';
 import { PolymerElementsComponent } from './projects/polymer-elements/polymer-elements.component';
+import { CommunicationComponent } from './communication/communication.component';
 
 const appRoutes: Routes = [
   { path: 'projects', component: ProjectsComponent },
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
     CustomProductsComponent,
     DesignSystemComponent,
     ColorsForDataVisComponent,
-    PolymerElementsComponent
+    PolymerElementsComponent,
+    CommunicationComponent
   ],
   imports: [
     BrowserModule,

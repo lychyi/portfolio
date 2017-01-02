@@ -4,7 +4,7 @@ import { FolioDataService } from '../../folio-data.service';
 @Component({
   selector: 'app-accessible-color',
   templateUrl: './accessible-color.component.html',
-  styleUrls: ['./accessible-color.component.scss']
+  styleUrls: ['../../shared-styles/project-page-styles.scss', './accessible-color.component.scss']
 })
 export class AccessibleColorComponent implements OnInit {
   title: string = '';

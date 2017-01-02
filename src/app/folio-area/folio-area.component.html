@@ -1,5 +1,5 @@
-
+<app-header></app-header>
 <app-folio-feature-card *ngFor="let feat of features" class="{{feat.themeClass}}" routerLink="{{feat.routeLink}}">
   <img src="/assets/img/{{feat.imgSrc}}" alt="" class="feature-image">
-  <h2>{{feat.title}}</h2>
+  <span class="feature-title">{{feat.title}}</span>
 </app-folio-feature-card>

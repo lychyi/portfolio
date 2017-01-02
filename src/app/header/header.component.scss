@@ -10,7 +10,7 @@
 }
 #title-header {
     position: absolute;
-    top: -80px;
+    top: -162px;
     z-index: -999;
     font-size: 12em;
     color: #FFFFFF;
@@ -19,11 +19,6 @@
 #site-description {
     font-size: 1.4em;
     margin: 15px 0;
-}
-@media only screen and (max-width: 1280px) {
-    #contact-lynn-text {
-        display: none;
-    }
 }
 @media only screen and (max-width: 1000px) {
     #title-header {
@@ -52,27 +47,4 @@
     #site-description {
         font-size: 1.1em;
     }
-}
-#contact-lynn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 0.9em;
-    cursor: pointer;
-    transition: 0.5s transform, 0.5s filter cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-#contact-lynn-text {
-    background-color: #EFF1F5;
-    padding: 5px;
-}
-#contact-lynn:hover {
-    transform: translateY(-0.4em);
-    filter: grayscale(100%);
-}
-#comm {
-    order: -1;
-    margin: 0 0.5em;
-    height: 48px;
-    width: 48px;
-    opacity: 0.8;
 }
