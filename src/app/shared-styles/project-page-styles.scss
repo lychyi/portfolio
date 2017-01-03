@@ -23,6 +23,7 @@ img.full-width {
     margin: 25px 0;
 }
 img.centered {
+    max-width: 100%;
     margin: 0 auto;
 }
 .statement {
@@ -40,4 +41,10 @@ img.centered {
     margin-bottom: 50px;
     height: 620px;
     width: 100%; 
+}
+.image-caption {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    margin: 1em 0;
 }

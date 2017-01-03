@@ -5,15 +5,83 @@
   <div class="project-text">
     <h1>{{title}}</h1>
     <p>
-      DesignStudio is a line of software that creates custom assay designs for Illumina's two major category of products: the microarray and next-generation sequencing.
-      It has been one of the products where I was in charge of both the user experience design and front end engineering.
-      The value of having a solid design language and a well-made developer experience proved pivotal in meeting timelines despite changes.
+      <i>
+        In 2016, my team was tasked to take over a small form-based software that was responsible for helping researchers customize their Illumina products.
+        We were challenged to refactor the monolithic code-base while keeping the central algorithm intact.
+        As the lead designer and front end developer, I was responsible for creating a new experience and the codebase for it.
+      </i>
     </p>
-    <h2>Develop the developer experience</h2>
     <p>
-      Webpack, Browsersync, npm scripts, VS Code, run tasks.
+      The microarray assay has been a core technology of Illumina for nearly a 15 years.
+      It has been utilized to support some of the most well-known genomics businesses out there like <a href="https://www.23andme.com/genetic-science/">23 and Me</a> and <a href="https://www.ancestry.com/dna/resource/whitePaper/AncestryDNA-Ethnicity-White-Paper.pdf">Ancestry.com</a>.
+      Creating customized versions of this product is still the heart of genomic research in many different areas today.
+    </p>
+    <h3>Redesign and rewrite</h3>
+    <p>
+      While a lot of our products and manufacturing has improved with technology, the supporting software has not.
+      Right when I joined Illumina, an opportunity had come up to redesign the original customizer tool (faithfully known as ADT, the assay design tool) to correspond with a new product launch.
+    </p>
+    <p>
+      I had the privilege to lead the user experience and visual design as well as the front end architecture.
+      This allowed our team to pivot quickly between design concepts and implementation so our sprints moved quickly throughout the year.
+    </p>
+    <h2>The gist</h2>
+    <p>
+      ADT was a great concept at the time.
+      It would allow a researcher to submit a comma-separated value (CSV) file that inquires about specific locations (or targets) in the genome for a particular species.
+      This would be the foundation for an experiment they could run over and over to do in-depth analysis on a sample of DNA.
+      For example, if an oncologist wanted to do research on lung cancer, they could create an experiment that tests for the existence of genetic markers that would give them scientific insight through DNA.
+    </p>
+    <p>
+      ADT would do basic validation of the CSV file and then crunch through it with a complex algroithm.
+      Certain areas of the genome are harder to analyze than others so we wanted to make sure that the researcher knows the likelihood of success for each target.
+      Once everything was verified to their liking, Illumina could then create a custom microarray for them (we call it a 'beadchip') so that they could do their study as efficiently as possible.
+    </p>
+    <h3>Before (ADT)</h3>
+  </div>
+  <a href="/assets/custom-products/adt-old-01.png"><img class="full-width" src="/assets/custom-products/adt-old-01.png" alt="What ADT used to look like."></a>
+  <div class="project-text">
+    <h3>After (DesignStudio Microarray Assay Designer)</h3>
+  </div>
+  <a href="/assets/custom-products/dsa-screen-01.png"><img class="full-width" src="/assets/custom-products/dsa-screen-01.png" alt="The new DesignStudio Array Assay Selection Screen"></a>
+  <a href="/assets/custom-products/dsa-screen-02.png"><img class="full-width" src="/assets/custom-products/dsa-screen-02.png" alt="The new DesignStudio Array Summary Screen"></a>
+  <div class="project-text">
+    <h3>If it ain't broke don't fix it?</h3>
+    <p>
+      ADT had been in use for at least a decade but the time had come to rebrand, revamp, and redo it.
+      Modern web technologies were much improved, Angular was about to release 1.5 and the popular framework was at its most mature state.
+      Moreover, the user interface needed a facelift and we could easily solve common pitfalls of the software just by designing a better experience from start to finish.
     </p>
     <h2>Establish a design language</h2>
+    <p>
+      One of the first things to do was to set up a baseline design language.
+      This would be something that future designers would be able to look at and craft new sections of the software with ease.
+      By simply addressing the design elements from an <a href="http://atomicdesign.bradfrost.com/chapter-2/">atomic level</a> and then assembling upwards, more complex objects would take shape with predictable results.
+    </p>
+    <h3>Creating atomic elements pays for itself over time</h3>
+    <p>
+      For just about any project that I start, I itemize a library of 'atoms' that are used to build up user interfaces.
+      I do this for two reasons:
+    </p>
+    <ol>
+      <li>User testing results are generally more authentic when prototypes are more believable (Goldilocks fidelity).</li>
+      <li>Validated features and screens can easily be passed onto developers with little to no modifications.</li>
+    </ol>
+    <p>
+      Don't get me wrong, I love pen and paper and lo-fidelity mockups for quick ideation, but those are a one-time use effort.
+      Having my own well-crafted component library is something that has multiple uses and gives value throughout the lifecycle of the project.
+    </p>
+    <a href="/assets/custom-products/dsa-atomic-elements.png"><img class="centered" src="/assets/custom-products/dsa-atomic-elements.png" alt="DesignStudio Array Atomic Elements"></a>
+    <span class="image-caption">
+      Atomic element library created in Sketch
+    </span>
+    <h2>Develop the developer experience</h2>
+    <p>
+      One thing that was important to 
+    </p>
+    
+  </div>
+  <div class="project-text">
     <p>
       Respect the brand and look for opportunities to innovate.
       Zero states.

@@ -53,7 +53,6 @@ a {
     text-decoration: none;
     padding: 2px 0;
     border-bottom: 2px solid #73F08C;    
-    background-color: rgba(255,255,255,0.2);
     transition: background-color 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 a:hover {
@@ -61,4 +60,14 @@ a:hover {
 }
 a:visited {
     color: #23272D;
+}
+a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
+    text-decoration: none;
+    border: 0 none;
+}
+a:hover[href$=jpg], a:hover[href$=jpeg], a:hover[href$=jpe], a:hover[href$=png], a:hover[href$=gif] {
+    background-color: transparent;
+}
+img {
+    max-widtH: 100%;
 }
