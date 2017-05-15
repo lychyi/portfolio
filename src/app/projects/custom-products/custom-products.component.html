@@ -6,78 +6,100 @@
     <h1>{{title}}</h1>
     <p>
       <i>
-        In 2016, my team was tasked to take over a small form-based software that was responsible for helping researchers customize their Illumina products.
-        We were challenged to refactor the monolithic code-base while keeping the central algorithm intact.
-        As the lead designer and front end developer, I was responsible for creating a new experience and the codebase for it.
+        My team was tasked to take over a small form-based software that was responsible for helping researchers customize their Illumina products.
+        We were challenged to give it a fresh and efficient new design while refactoring the difficult to maintain, monolithic code-base behind it.
+        As the lead designer and front end developer, I was responsible for designing a brand new web application for it from the ground up.
       </i>
     </p>
     <p>
       The microarray assay has been a core technology of Illumina for nearly a 15 years.
-      It has been utilized to support some of the most well-known genomics businesses out there like <a href="https://www.23andme.com/genetic-science/">23 and Me</a> and <a href="https://www.ancestry.com/dna/resource/whitePaper/AncestryDNA-Ethnicity-White-Paper.pdf">Ancestry.com</a>.
-      Creating customized versions of this product is still the heart of genomic research in many different areas today.
-    </p>
-    <h3>Redesign and rewrite</h3>
-    <p>
-      While a lot of our products and manufacturing has improved with technology, the supporting software has not.
-      Right when I joined Illumina, an opportunity had come up to redesign the original customizer tool (faithfully known as ADT, the assay design tool) to correspond with a new product launch.
+      It has been utilized to support some of the most well-known genomics entities out there like <a href="https://www.23andme.com/genetic-science/" target="_blank">23 and Me</a> and <a href="https://www.ancestry.com/dna/resource/whitePaper/AncestryDNA-Ethnicity-White-Paper.pdf" target="_blank">Ancestry.com</a>.
+      Creating customized versions of this assay is still the heart of genomic research in many areas today.
     </p>
     <p>
-      I had the privilege to lead the user experience and visual design as well as the front end architecture.
-      This allowed our team to pivot quickly between design concepts and implementation so our sprints moved quickly throughout the year.
+      While a lot of Illumina's products innovate quickly, the supporting software often lags behind.
+      ADT has been successful but largely untouched throughout the years other than the occasional bugfix.
+      In 2016, we were given the green light to redesign ADT to accommodate a new product launch.
     </p>
-    <h2>The gist</h2>
+    <h3>What is (was) ADT?</h3>
     <p>
-      ADT was a great concept at the time.
-      It would allow a researcher to submit a comma-separated value (CSV) file that inquires about specific locations (or targets) in the genome for a particular species.
+      ADT would allow a researcher to submit a comma-separated value (CSV) file that inquires about specific genomic targets (or locations) for a particular species.
       This would be the foundation for an experiment they could run over and over to do in-depth analysis on a sample of DNA.
       For example, if an oncologist wanted to do research on lung cancer, they could create an experiment that tests for the existence of genetic markers that would give them scientific insight through DNA.
     </p>
     <p>
-      ADT would do basic validation of the CSV file and then crunch through it with a complex algroithm.
-      Certain areas of the genome are harder to analyze than others so we wanted to make sure that the researcher knows the likelihood of success for each target.
-      Once everything was verified to their liking, Illumina could then create a custom microarray for them (we call it a 'beadchip') so that they could do their study as efficiently as possible.
+      It would then do basic validation of the CSV file and then crunch through it with a complex algroithm.
+      Certain areas of the genome are harder to analyze than others so one of ADT's main jobs was to ensure that the researcher knows the likelihood of success for each target.
+      Once everything was verified to their liking, Illumina could then create a custom microarray for the researcher (we call it a 'beadchip') so that they could do their study as efficiently as possible.
     </p>
-    <h3>Before (ADT)</h3>
+    <h3>Product Goals</h3>
+    <p>
+      Our new software had to accomplish a few goals:
+    </p>
+    <ol>
+      <li>Be similar to the way ADT functions currently as to not alienate current users familiar with it</li>
+      <li>Have a similar look, feel, <i>&amp;</i> experience with DesignStudio, another custom product platform, so that users can have a cohesive experience designing any custom product at Illumina</li>
+      <li>Be a modernized software product to parallel a new, modernized microarray product</li>
+    </ol>
+    <h3>Code from scratch</h3>
+    <p>
+      ADT had been in use for at least a decade and the time had come to start from scratch.
+      Modern web technologies were much improved.
+      At the time, <a href="https://angularjs.org/" target="_blank">Angular</a> was about to release version 1.5 and the popular framework was at its most mature state.
+      The supporting tools had gotten so good, applications practically bundled and deployed themselves (of course you have to go through a brutal rite-of-passage called <a href="https://webpack.js.org/" target="_blank">Webpack</a> 'configuration').
+      Moreover, the user interface needed a facelift and we could easily solve common painpoints of ADT just by re-thinking the workflow from start to finish.
+    </p>
+    <p>
+      The journey took a about 6 months but ultimately, the results were well worth the challenges.
+      We evolved the platform into an HTML forms-based web page to an elegant, single-page Angular application.
+    </p>
+    <p>
+      On the performance side, we improved pageload times by optimizing the front end vendor files using Webpack.
+      We automated the deployment to various environments using <a href="https://github.com/" target="_blank">Github</a>, <a href="https://www.jetbrains.com/teamcity/" target="_blank">Team City</a>, and <a href="https://octopus.com/" target="_blank">Octopus Deploy</a>.
+    </p>
+    <div class="statement">Before (ADT)</div>
   </div>
   <a href="/assets/custom-products/adt-old-01.png"><img class="full-width" src="/assets/custom-products/adt-old-01.png" alt="What ADT used to look like."></a>
   <div class="project-text">
-    <h3>After (DesignStudio Microarray Assay Designer)</h3>
+    <div class="statement">After (DesignStudio)</div>
   </div>
   <a href="/assets/custom-products/dsa-screen-01.png"><img class="full-width" src="/assets/custom-products/dsa-screen-01.png" alt="The new DesignStudio Array Assay Selection Screen"></a>
   <a href="/assets/custom-products/dsa-screen-02.png"><img class="full-width" src="/assets/custom-products/dsa-screen-02.png" alt="The new DesignStudio Array Summary Screen"></a>
   <div class="project-text">
-    <h3>If it ain't broke don't fix it?</h3>
+    <h2>Component-driven Design</h2>
+    <blockquote>
+      By simply addressing the design elements from an atomic level and then assembling upwards, more complex interfaces can take shape with predictable results.
+    </blockquote>
+    <h3>Component libraries pay for themselves over time</h3>
     <p>
-      ADT had been in use for at least a decade but the time had come to rebrand, revamp, and redo it.
-      Modern web technologies were much improved, Angular was about to release 1.5 and the popular framework was at its most mature state.
-      Moreover, the user interface needed a facelift and we could easily solve common pitfalls of the software just by designing a better experience from start to finish.
-    </p>
-    <h2>Establish a design language</h2>
-    <p>
-      One of the first things to do was to set up a baseline design language.
-      This would be something that future designers would be able to look at and craft new sections of the software with ease.
-      By simply addressing the design elements from an <a href="http://atomicdesign.bradfrost.com/chapter-2/">atomic level</a> and then assembling upwards, more complex objects would take shape with predictable results.
-    </p>
-    <h3>Creating atomic elements pays for itself over time</h3>
-    <p>
-      For just about any project that I start, I itemize a library of 'atoms' that are used to build up user interfaces.
+      For just about any project that I start, I spend time to craft a library of quality 'atoms' that are used to prototype user interfaces with Goldilocks-fidelity (not too hi-fi, not too lo-fi, but just right).
       I do this for two reasons:
     </p>
     <ol>
-      <li>User testing results are generally more authentic when prototypes are more believable (Goldilocks fidelity).</li>
-      <li>Validated features and screens can easily be passed onto developers with little to no modifications.</li>
+      <li>User testing results on believable prototypes are generally more authentic compared to when users know they're just testing a 'prototype'.</li>
+      <li>Validated features and screens can easily be passed onto developers with little to no modifications since they are visually true to the final design.</li>
     </ol>
     <p>
-      Don't get me wrong, I love pen and paper and lo-fidelity mockups for quick ideation, but those are a one-time use effort.
-      Having my own well-crafted component library is something that has multiple uses and gives value throughout the lifecycle of the project.
+      Don't get me wrong, I love pen and paper and lo-fidelity mockups for quick ideation when time is at a premium, but those are a one-time use effort.
+      Having my own well-crafted component library is something that has multiple uses and gives value throughout the lifecycle of a project.
+      By simply addressing the design elements from an <a href="http://atomicdesign.bradfrost.com/chapter-2/" target="_blank">atomic level</a> and then assembling upwards, more complex interfaces can take shape with predictable results.
     </p>
     <a href="/assets/custom-products/dsa-atomic-elements.png"><img class="centered" src="/assets/custom-products/dsa-atomic-elements.png" alt="DesignStudio Array Atomic Elements"></a>
     <span class="image-caption">
-      Atomic element library created in Sketch
+      DesignStudio's Component library
     </span>
-    <h2>Develop the developer experience</h2>
+    <div class="statement">Sketch has brought the "rapid" to rapid prototyping</div>
     <p>
-      One thing that was important to 
+      <a href="https://www.sketchapp.com/" target="_blank">Sketch</a> has made it elegant to build component libraries with their <a href="https://www.sketchapp.com/learn/documentation/symbols/" target="_blank">symbols feature</a>.
+      It allows easy reuse of common user interface elements across artboards and fits perfectly with a component-driven design process.
+      Ultimately, it makes the design process fast, often times turning ideas into prototypes within the same day (or hour).
+    </p>
+    <h2>Designing the development experience</h2>
+    <p>
+    </p>
+    <div class="statement">JavaScript. Love it or loathe it.</div>
+    <p>
+      Part of architecting the front end is to ensure that the developer experience is great as well.
     </p>
     
   </div>
@@ -89,7 +111,7 @@
       D3 for charts.
       Helix loader.
     </p>
-    <h2>Focus on performance early</h2>
+    <h2>Focus on performance at the start</h2>
       <p>Use lightweight imagery, pngs, svgs.</p>
     <h2>Seek feedback early and often</h2>
       <p>Build a relationship with technical support, internal users, and marketing.</p>
