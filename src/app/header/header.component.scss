@@ -8,26 +8,23 @@
     text-align: center;
     padding: 20px 30px;
 }
-#title-header {
-    position: absolute;
-    top: -162px;
-    z-index: -999;
-    font-size: 12em;
-    color: #FFFFFF;
-    font-weight: 700;
-}
+// #title-header {
+//     position: absolute;
+//     top: -162px;
+//     z-index: -999;
+//     font-size: 12em;
+//     color: #FFFFFF;
+//     font-weight: 700;
+// }
 #site-description {
     font-size: 1.4em;
     margin: 15px 0;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1080px) {
     #title-header {
         font-size: 8em;
         right: inherit;
         top: -55px;
-    }
-    :host {
-        padding-top: 50px;
     }
     #site-description {
         font-size: 1.2em;
@@ -40,9 +37,6 @@
         right: inherit;
         top: -15px;
         white-space: nowrap;
-    }
-    :host {
-        padding-top: 80px;
     }
     #site-description {
         font-size: 1.1em;

@@ -17,6 +17,7 @@ import { DesignSystemComponent } from './projects/design-system/design-system.co
 import { ColorsForDataVisComponent } from './projects/colors-for-data-vis/colors-for-data-vis.component';
 import { PolymerElementsComponent } from './projects/polymer-elements/polymer-elements.component';
 import { CommunicationComponent } from './communication/communication.component';
+import { HomeButtonComponent } from './home-button/home-button.component';
 
 const appRoutes: Routes = [
   { path: 'projects', component: ProjectsComponent },
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
     DesignSystemComponent,
     ColorsForDataVisComponent,
     PolymerElementsComponent,
-    CommunicationComponent
+    CommunicationComponent,
+    HomeButtonComponent
   ],
   imports: [
     BrowserModule,
