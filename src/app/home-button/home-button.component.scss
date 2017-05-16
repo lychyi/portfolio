@@ -3,8 +3,7 @@
     display: block;
     bottom: 20px;
     right: 20px;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    z-index: 10001;
 }
 #home-button-cmp {
     display: flex;
@@ -13,7 +12,6 @@
     font-size: 0.9em;
     cursor: pointer;
     transition: 0.5s transform, 0.5s filter cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    z-index: 10001;
 }
 #home-button-cmp:hover {
     transform: translateY(-0.4em);

@@ -6,79 +6,72 @@
     <h1>{{title}}</h1>
     <p>
       <i>
-        Illumina's software family is a truly diverse ecosystem of products that run the gamut of function and form.
-        When I joined the company, I became a member of a team dedicated to developing a color system for web user interfaces.
-        By collaborating with brand experts, developers, and designers, I lead the effort to craft a system that solved some of our biggest issues like accessibility and consistency.
-        
+        Illumina's software family is a diverse ecosystem of products that run the gamut of function and form.
+        When I joined the company, I joined a cross-functional team dedicated to developing a color system for web user interfaces.
+        Our challenge was to create a color system that was easy to understand and use, yet flexible enough to use throughout the organization.
       </i>
     </p>
     <p>
       A color system for the web is somewhat unique.
-      Color conveys important information and provides context (warnings, errors, and successes).
-      Moreover, it reflects your product's brand and can even be an important part of the brand in it of itself.
-      Surprisingly though, color is often times inconsistent across user interfaces and treated as an afterthought.
+      Color can convey important information and while providing helpful context like <span style="color: green">"success"</span> or <span style="color: crimson">"error"</span>.
+      Moreover, it reflects your product's brand and can even play a critical role of promoting it (<a href="http://www.tiffany.com/" target="_blank">Tiffany <span style="color: #81d8d0">blue</span></a> for example).
+      But perhaps unsurprisingly, color doesn't get the attention it deserves when designing software and relating it to the brand. 
+      I mean, it's purely subjective right? 
       Without guidelines, does it matter if we're using <span style="color: #FFB441">this orange</span> or <span style="color: #FC9900">this orange</span>?
-      Furthermore, how do we even know when and where to use colors.
-      Can you can read <span style="color: #FFB441">this orange</span> on this background?
-      If you have monochromacy (a type of color blindness where you see the world in only one frequency of color or in black and white), it may be difficult since the relative luminance values of each color may be too close, resulting in low contrast.
-      Can you read the following? <span style="color: #C2C2C2">"I may be difficult to read on certain devices."</span>
-      Probably, but it isn't easy and this is similar to what a person with monochromacy will encounter with the orange shown earlier against this background.
+      How do we know when to use what colors for what function? 
+      Can you can read <span style="color: #FFB441">this orange</span> (<code>#FFB441</code> in hex) on this background?
+      If you have <a href="https://en.wikipedia.org/wiki/Monochromacy" target="_blank">monochromacy</a> (a type of color blindness), it may be difficult.
+      Can you read the following? <span style="color: #C2C2C2">"This is what a person with monochromacy would see if viewing <code>#FFB441</code>."</span>
+      Probably, but you're struggling because of the contrast. Yet this is similar to what a person with monochromacy will encounter if we don't think about accessibility when choosing our colors.
     </p>
     <div class="statement">Accessibility matters.</div>
     <p>
       At Illumina, we faced challenges like this. Our brand colors were never designed for software user interfaces on the web, let alone an entire family and ecosystem of products.
-      That <span style="color: #FFB441">orange color</span> we presented earlier? That's <i>Illumina Pumpkin Orange</i>. Our flagship brand color.
-      When we use that on software user interfaces with a light-grey background, we're essentially making accessibility difficult.
-      I'm not saying anyone advised software developers to use Illumina Pumpkin Orange on grey but without guidelines and principles (and some unspoken rule that all scientific software needs to have a light-grey or white background), you can see how it is easy to misuse.
+      That <span style="color: #FFB441">orange color</span> we presented earlier? That's <i>Illumina Pumpkin Orange</i>, our flagship brand color.
+      When we use that on software user interfaces with a light-grey background (like the one you're viewing now), we're essentially making life difficult for our color blind users. 
+      And being our company's main brand color, you can easily see how it can be misused.
     </p>
     <h3>Inaccessible and inconsistent</h3>
     <p>
-      Without a formal color system, software at Illumina could be designed with any palette.
-      Color was up to the designer or developer to implement.
-      This resulted in colors that were inconsistent across user interfaces and didn't necessarily reflect our brand or guarantee accessibility for all of our users.
+      Without a formal color system, software at Illumina could be designed with any color.
+      It was up to the designer or developer and perhaps whatever mood they were in.
+      And if you take a look at Illumina's history, you can see this in our products: inconsistent color choice and poor accessibility for all of our users.
     </p>
     <h2>Creating a color system</h2>
     <p>
-      So how does one design a color system? 
-      If you're a company or brand that has many software products, like Illumina, you'll want to a decent-sized color palette to choose from.
-      We didn't want one so big that you could choose just about anything.
-      We didn't want one so restrictive that all user interfaces would look nearly identical.
-      We also wanted guidelines and principles to be baked in so that the user of the color system would have an easier time reasoning about it.
-    </p>
-    <p>
-      With that in mind, we decided to develop a diverse color system specifically for the web with colors complementary to our brand and at the same time, promote standardized accessibility.
+      With branding and our users in mind, we decided to develop a diverse color system specifically for the web with colors complementary to our brand and at the same time, promote standardized accessibility.
     </p>
   </div>
   <div class="project-text">
-    <h2>Beg, Borrow, and Steal</h2>
+    <h3>Beg, Borrow, and Steal</h3>
     <blockquote>
       Luckily, the hard part was already done by someone else. 
     </blockquote>
     <p>
-      Color theory and systems for web user interfaces have been solved before. 
-      When our design team met up to discuss color, it immediately became clear that it was difficult to solve this organically.
-      We needed a programmatic, methodical way to go about this.
+      Color theory and systems for web user interfaces have been reasoned about before. 
+      When our team met up to discuss our approach, it immediately became clear that it was difficult to solve this in a vaccum.
+      We needed some inspiration.
     </p>
     <p>
       Color is the way which we perceive segments of the visible light spectrum.
-      We're talking about wavelengths, contrast, luminance, hue, saturation, lightness, etc.
-      In other words, functional parameters of a complex physics equation.
-      We have a natural tendency to attach emotion and subjectiveness to color, but a solid color system needed to be based upon color theory and a bit of math.
+      We're talking about things like wavelengths, contrast, luminance, hue, saturation, lightness, etc.
+      In other words, the output of a complex equations. 
+      We have a natural tendency to associate emotion and subjectiveness to color, but a solid color system needs to be based upon color theory and a bit of math.
     </p>
     <p>
       Luckily, the hard part was already done by someone else. 
-      The <a href="http://www.ibm.com/design/language/framework/visual/color/" target="_blank">IBM Design Language</a> had already neatly solved this problem in an elegant way.
-      They had a color system with baked in accessibility and it had eough variation to give us a diverse palette.
-      We made a few small modifications but this color system unashamedly borrows from them.
+      The <a href="http://www.ibm.com/design/language/framework/visual/color/" target="_blank">IBM Design Language</a> had neatly solved this problem.
+      They had a color system with baked in accessibility and it had enough variation for a diverse palette.
+      When it was all said and done, we made a few modifications but this color system unashamedly borrows from them.
     </p>
     <div class="statement">
       Thank you IBM Design.
     </div>
     <h2>Accessibility comes down to contrast. Contrast is math. Make the math simple.</h2>
     <p>
-      Accessibility really just comes down to contrast.
-      Your eyes are good at distinguishing the contrast between colors unless you have some form of color blindness.
-      In order for us to use colors in an accessible way, we have to assume that the text that conveys information in our user interfaces do so with enough contrast regardless of color.
+      How do we create colors that help our color blind users?
+      Even if you have color blindness, your eyes can distinguish between different contrast points.
+      In order for us to use colors in an that way, we have to assume that the text that conveys information in our user interfaces do so with enough contrast regardless of color we choose.
       There are minimum contrast ratios prescribed by the <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" target="_blank">W3C</a> that define what makes text legible for all users.
       The equation is based on <a href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef" target="_blank">relative luminance</a>.
       Once you get relative luminance, you plug it into this equation:
@@ -86,11 +79,15 @@
       Where <code>L1</code> is the lighter of the two colors and <code>L2</code> is the darker of the two colors.
     </p> 
     <p>
-      But we're busy.
       Having to plug colors into an equation to verify contrast for accessibility is tedious at best.
-      What's more problematic is that it wouldn't do us any favors when designing for accessibility.
+      In addition, making it difficult wouldn't do us any favors if we're trying to promote the importance of designing for accessibility.
     </p>
-    <p>This is much easier: </p>
+    <p>
+      An easy way to solve this is to simplify the math. 
+      We labeled each color in the system with a number. 
+      This number corresponds to a specific relative luminance value and a designer or developer can determine what is appropriate contrast by simple subtraction.
+    </p>
+    <p>Something like this is much easier: </p>
     <div class="contrast-example-section">
       <div class="contrast-example">
         <h3 style="color: #FFF;"><b>Holy Cow Batman!</b></h3>
@@ -106,13 +103,12 @@
         </span>
       </div>
     </div>
-    <h2>Color and numbers?</h2>
+    <h2>How we built this.</h2>
     <h3>Pick primary hues to start</h3>
     <p>
-      What we ended up doing at Illumina was picking a few starting hues for our color palette.
-      This is the largely subjective part and arguable the most important since it sets us apart from just outright using someone else's color palette.
+      We started with some starting hues for our color palette.
+      This is the largely subjective part and arguable the most important part in distinguishing our brand from another.
       The colors were inspired by the vibrant optical filters inside of our Illumina sequencers.
-      We also wanted boldness and vibrancy to be the dominant theme for our colors so this was perfect.
     </p>
   </div>
   <div class="color-spectrum">
@@ -121,7 +117,7 @@
   <div class="project-text">
     <h3>Generate shades from those hues</h3>
     <p>
-      We then generated a variety of shades (we did this programmatically using <a href="https://github.com/gka/chroma.js/" target="_blank">chroma.js</a>, a very handy JavaScript library when working with color) from these hues based on relative luminance and gave it a numerical label.
+      We then generated a variety of shades (we did this programmatically using <a href="https://github.com/gka/chroma.js/" target="_blank">chroma.js</a>) from these hues based on relative luminance and gave it a numerical label.
       This label corresponds to the contrast calculation we did in the example above.
       Whenever two colors have a difference of 50 or greater, we can be assured that there is enough contrast by WCAG standards to be accessible.
     </p>
@@ -163,7 +159,7 @@
     </div>
   </div>
   <div class="project-text">
-    <h3>Voila. Consistent, Accessible Colors</h3>
+    <h3>Bingo. Consistent, Accessible Colors</h3>
     <p>
       This results in a color system that is diverse yet consistent.
       We carefully selected colors that reflect our brand and generated enough variation for our current user interfaces and the ones to come.
@@ -171,16 +167,8 @@
     <h2>Subjectivity meets practicality</h2>
     <blockquote>A successful color system needs to strike the right balance between form and function.</blockquote>
     <p>
-      Programmatic color generation does have some issues.
-      It doesn't account for how we perceive color as humans.
-      For example, our 'warning' (yellow) hue started getting muddy from shades 40 and beyond.
-      Unfortunately, this is just the nature of how orange and yellow hues get when their shades get darker so we just nixed shades 40 through 90.
-      Another example is that we removed the darkest shade (it was nearly black) and added a lighter shade because we felt that our user interfaces needed more subdued versions of the hues.
-    </p>
-    <p>
       A successful color system needs to strike the right balance between form and function.
-      Our aim was to craft a system of colors that really reflected a consistent brand while promoting accessibility at it's core.
-      We were able to accomplish this while still making it beautiful.
+      With a bit of inspiration and code, we were able to craft a system of colors that really reflected Illumina's brand and our products well while promoting accessibility at it's core.
     </p>
   </div>  
 </article>

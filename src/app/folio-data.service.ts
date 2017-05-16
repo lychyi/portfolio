@@ -35,13 +35,13 @@ export class FolioDataService {
         themeClass: 'clean-laundry',
         routeLink: 'colors-for-data-visualizations'
       },
-      {
-        id: 5,
-        title: 'Component Driven Design with Polymer',
-        imgSrc: 'polymer-logo.svg',
-        themeClass: 'slate-60',
-        routeLink: 'polymer-elements'
-      },
+      // {
+      //   id: 5,
+      //   title: 'Component Driven Design with Polymer',
+      //   imgSrc: 'polymer-logo.svg',
+      //   themeClass: 'slate-60',
+      //   routeLink: 'polymer-elements'
+      // },
     ];
 
     return mockData;
