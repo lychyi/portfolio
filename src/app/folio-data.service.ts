@@ -21,20 +21,20 @@ export class FolioDataService {
         themeClass: 'cool-mint',
         routeLink: 'custom-products'
       },
-      {
-        id: 3,
-        title: 'Crafting a design system at Applied Genomics',
-        imgSrc: 'design-traits-logo-bare.svg',
-        themeClass: 'icy-water',
-        routeLink: 'design-system'
-      },
-      {
-        id: 4,
-        title: 'Multi-hued color palettes for data visualizations',
-        imgSrc: 'color-data-viz.svg',
-        themeClass: 'clean-laundry',
-        routeLink: 'colors-for-data-visualizations'
-      },
+      // {
+      //   id: 3,
+      //   title: 'Crafting a design system (WIP)',
+      //   imgSrc: 'design-traits-logo-bare.svg',
+      //   themeClass: 'icy-water',
+      //   routeLink: 'design-system'
+      // },
+      // {
+      //   id: 4,
+      //   title: 'Multi-hued color palettes for data visualizations',
+      //   imgSrc: 'color-data-viz.svg',
+      //   themeClass: 'clean-laundry',
+      //   routeLink: 'colors-for-data-visualizations'
+      // },
       // {
       //   id: 5,
       //   title: 'Component Driven Design with Polymer',
