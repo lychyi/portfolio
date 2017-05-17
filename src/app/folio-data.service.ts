@@ -16,7 +16,7 @@ export class FolioDataService {
       },
       {
         id: 2,
-        title: 'User interface design and development for custom products at Illumina',
+        title: 'Designing and developing new software for custom products at Illumina',
         imgSrc: '96xt-beadchip-icon.svg',
         themeClass: 'cool-mint',
         routeLink: 'custom-products'

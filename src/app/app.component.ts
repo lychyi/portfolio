@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
       if (this.router.url === '/projects') {
         // Hide the home button because we are already 'home'
         this.showHomeButton = false;
+        window.scroll(0, 0);
         return;
       } else {
         this.showHomeButton = true;
